@@ -1,0 +1,28 @@
+.formWrapper {
+  margin-top: 10vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.input {
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+
+.answer {
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
