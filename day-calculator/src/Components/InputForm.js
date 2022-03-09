@@ -52,6 +52,9 @@ class InputForm extends React.Component {
     if (this.state.five.includes(this.state.year.slice(0, 2))) {
       a = 5;
     }
+    if (this.state.zero.includes(this.state.year.slice(0, 2))) {
+      a = 0;
+    }
     let xx = this.state.year.slice(2, 4);
     console.log(a);
     b = Math.floor(parseInt(xx) / 12);
@@ -63,7 +66,6 @@ class InputForm extends React.Component {
     console.log(this.state.month);
     let commonDayNumber = this.state.commonDays[this.state.month];
     // if leap year
-    // ========
     if (
       (parseInt(this.state.year) % 4 === 0 &&
         parseInt(this.state.year) % 100 !== 0) ||
@@ -95,7 +97,6 @@ class InputForm extends React.Component {
       "Friday",
       "Saturday",
     ];
-    console.log(daysOfTheWeek[dayOfTheWeekNumber]);
     return daysOfTheWeek[dayOfTheWeekNumber];
   };
 
