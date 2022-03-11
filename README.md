@@ -6,3 +6,7 @@ This app makes use of the Doomsday Algorithm, devised by mathematician John Conw
 
 | Day | Month |
 |-----|-------|
+| 3(4) | 1 |
+|-----|-------|
+| Day | Month |
+|-----|-------|
