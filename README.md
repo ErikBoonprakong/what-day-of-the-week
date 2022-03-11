@@ -54,7 +54,22 @@ Now all that's left to do is work out how many days to offset this by depending 
 The offset is equal to the remainder of <entered day number> / 7
 Then we add the remainder to dd and then recalculet the remainder when divided by 7 to get the day of the week for that particualr date
 ```
-erik
+
+# Full Example
+Let's take the date today (11th March 2022)
+```
+a = 2
+b = 1 = (22 / 12)
+c = 10 
+d = 2 = (10 / 4)
+dd = 1 
+
+March's doomsay falls on the 14th, but we want the day of the 11th, so we calculate the difference 
+14 - 11 = 3
+We know that the 14th of March 2022 (March's doomsday) is a Monday because dd = 1, so 3 days before a Monday = Friday
+```
+
+So the 11th March 2022 is a Friday.
 
 
 
