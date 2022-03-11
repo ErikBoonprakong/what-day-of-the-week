@@ -23,7 +23,7 @@ The day of the week that each months doomsday falls on in any given year can be 
 
 | Century Code | years |
 |--------------|-------|
-| 0 | 1700, 2100, 2400 |
-| 2 | 1600, 2000, 2400 |
-| 3 | 1500, 1900, 2300 |
-| 5 | 1800, 2200, 2600 |
+| 0 | 1700's, 2100's, 2400's |
+| 2 | 1600's, 2000's, 2400's |
+| 3 | 1500's, 1900's, 2300's |
+| 5 | 1800's, 2200's, 2600's |
