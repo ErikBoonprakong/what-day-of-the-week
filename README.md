@@ -40,5 +40,22 @@ b = xx / 12 = 14 / 12 = 1 (rounded down)
 c = remainder from previous division = 2
 d = c / 4 = 2 / 4 = 0 (rounded down)
 
-Then our doomsday value, d<sub>d</sub>
+Then our doomsday value, dd, is equivalent to the remainder of 
+(a + b + c + d) / 7 = (2 + 1 + 2 + 0) / 7 = 0 remainder 5
+dd = 5
+
+And finally, we order our days of the week as such
+weekdayArray = [ "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" ]
 ```
+So in 2014, every doomsday falls on the fifth day of the week (Friday), or the fifth index in our weekdayArray.
+
+Now all that's left to do is work out how many days to offset this by depending on the date entered
+```
+The offset is equal to the remainder of <entered day number> / 7
+Then we add the remainder to dd and then recalculet the remainder when divided by 7 to get the day of the week for that particualr date
+```
+erik
+
+
+
+
