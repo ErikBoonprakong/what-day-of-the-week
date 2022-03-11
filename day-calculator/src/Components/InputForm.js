@@ -9,10 +9,13 @@ class InputForm extends React.Component {
       day: "1",
       month: "1",
       year: "2022",
+      // Century codes
       three: ["15", "19", "23"],
       two: ["16", "20", "24"],
       zero: ["17", "21", "25"],
       five: ["18", "22", "26"],
+      // Days of each month that will always be the same day (doomsdays)
+      // commonDay for jan and feb will be increased by 1 on a leap year
       commonDays: {
         1: 3,
         2: 28,
@@ -32,9 +35,7 @@ class InputForm extends React.Component {
   }
 
   handleChange = (e) => {
-    console.log("changing..." + e.target.id + e.target.value);
     this.setState({ [e.target.id]: e.target.value });
-    console.log(this.state);
   };
 
   calculateDay = () => {
@@ -43,6 +44,7 @@ class InputForm extends React.Component {
       c,
       d,
       dd = 0;
+    // a = century code
     if (this.state.three.includes(this.state.year.slice(0, 2))) {
       a = 3;
     }
@@ -55,8 +57,8 @@ class InputForm extends React.Component {
     if (this.state.zero.includes(this.state.year.slice(0, 2))) {
       a = 0;
     }
+    // xx = last two digits of year
     let xx = this.state.year.slice(2, 4);
-    console.log(a);
     b = Math.floor(parseInt(xx) / 12);
     c = parseInt(xx) % 12;
     d = Math.floor(c / 4);
@@ -65,28 +67,32 @@ class InputForm extends React.Component {
     console.log(this.state.day);
     console.log(this.state.month);
     let commonDayNumber = this.state.commonDays[this.state.month];
+    let newCommonDayNumber = commonDayNumber;
     // if leap year
     if (
       (parseInt(this.state.year) % 4 === 0 &&
         parseInt(this.state.year) % 100 !== 0) ||
       parseInt(this.state.year) % 400 === 0
     ) {
-      if (this.state.month <= 2 && parseInt(this.state.day) > commonDayNumber) {
-        commonDayNumber += 1;
+      if (
+        this.state.month <= 2 &&
+        parseInt(this.state.day) >= commonDayNumber
+      ) {
+        newCommonDayNumber = commonDayNumber + 1;
       } else if (
         this.state.month <= 2 &&
         parseInt(this.state.day) <= commonDayNumber
       ) {
-        commonDayNumber -= 1;
+        newCommonDayNumber = commonDayNumber - 1;
       }
     }
     let dayOfTheWeekNumber;
-    if (parseInt(this.state.day) > commonDayNumber) {
+    if (parseInt(this.state.day) >= commonDayNumber) {
       dayOfTheWeekNumber =
-        (dd + parseInt(this.state.day) - commonDayNumber) % 7;
+        (dd + parseInt(this.state.day) - newCommonDayNumber) % 7;
     } else {
       dayOfTheWeekNumber =
-        (dd + parseInt(this.state.day) - commonDayNumber * -1) % 7;
+        (dd + parseInt(this.state.day) - newCommonDayNumber * -1) % 7;
     }
     const daysOfTheWeek = [
       "Sunday",
