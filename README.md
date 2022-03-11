@@ -19,4 +19,11 @@ This app makes use of the Doomsday Algorithm, devised by British mathematician J
 | 14 | 11 |
 | 4 | 12 |
 
-erik
+The day of the week that each months doomsday falls on in any given year can be calculated by first assigning a century code to the year. For simplicity's sake, the century codes for 1500 - 2600 are as follows. Note, the Georegorian calendar repeats every 400 years so this table can be easily expanded if needed.
+
+| Century Code | years |
+|--------------|-------|
+| 0 | 1700, 2100, 2400 |
+| 2 | 1600, 2000, 2400 |
+| 3 | 1500, 1900, 2300 |
+| 5 | 1800, 2200, 2600 |
