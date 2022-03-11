@@ -27,3 +27,18 @@ The day of the week that each months doomsday falls on in any given year can be 
 | 2 | 1600's, 2000's, 2400's |
 | 3 | 1500's, 1900's, 2300's |
 | 5 | 1800's, 2200's, 2600's |
+
+We can then do some calculations using the last two digits of year. E.G
+```
+Year = yyxx
+
+So for example for the year 2014
+
+xx = 14
+a = 2 (century code)
+b = xx / 12 = 14 / 12 = 1 (rounded down)
+c = remainder from previous division = 2
+d = c / 4 = 2 / 4 = 0 (rounded down)
+
+Then our doomsday value, d<sub>d</sub>
+```
